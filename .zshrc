@@ -36,14 +36,16 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 # Git related stuff
 alias gs="git status"
 alias gp="git push"
-# alias ::="git add .; git commit -m"
-
+alias ::="git add .; git commit -m"
+alias amend='git commit --amend -m "$1"'
 alias chr='git commit -m "Chore: $1"'
 alias fix='git commit -m "Fix: $1"'
 alias feat='git commit -m "Feat: $1"'
 alias gif='git diff'
 alias empty='git commit --allow-empty -m "$1"'
 alias btree="git log --graph --oneline --all"
+alias commit='git commit -m "$1"'
+alias add='git add '
 
 # MySQL (homebrew)
 alias smysql="brew services start mysql"
