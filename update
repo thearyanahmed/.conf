@@ -9,7 +9,7 @@ fi
 commit_and_push() {
   echo $MSG;
   git add .;
-  git commit -m "Update $1";
+  git commit -m "Update '$1'";
   git push;
 }
 
