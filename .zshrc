@@ -94,3 +94,8 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export GOPATH=$HOME/awesomego
 
 export HOMEBREW_NO_AUTO_UPDATE=true
+
+
+# Include private values
+source ~/.private.rc
+
