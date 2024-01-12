@@ -40,6 +40,12 @@ alias ::="git add .; git commit -m"
 alias gif='git diff'
 alias btree="git log --graph --oneline --all"
 
+
+add() {
+  git add "$@"
+}
+
+
 amend() {
   git commit --amend -m "$*"
 }
@@ -78,6 +84,8 @@ alias systemshutdown="valet stop; stmysql;"
 
 
 alias shr="source ~/.zshrc"
+
+alias vi="nvim"
 export GOPATH=$HOME/awesomego
 
 # sourcing
