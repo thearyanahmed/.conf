@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Check if a file name is provided as a parameter
+if [ "$#" -ne 1 ]; then
+  echo "Usage: ./update <parameter>"
+  exit 1
+fi
+
+commit_and_push() {
+  echo $MSG;
+  git add .;
+  git commit -m "Update $1";
+  git push;
+}
+
+
+if [ "$1" = "zshrc" ]; then
+
+  if [ -e ".zshrc" ]; then
+    rm .zshrc
+  fi
+
+  # Remove the existing zshrc if it exists
+
+  cp ~/.zshrc .zshrc
+
+  commit_and_push
+fi
+
+
