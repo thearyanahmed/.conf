@@ -40,14 +40,6 @@ alias ::="git add .; git commit -m"
 alias gif='git diff'
 alias btree="git log --graph --oneline --all"
 
-#unalias amend
-#unalias chr
-#unalias fix
-#unalias feat
-#unalias empty
-#unalias commit
-
-
 amend() {
   git commit --amend -m "$*"
 }
