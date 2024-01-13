@@ -10,7 +10,7 @@ local plugins = {
     "stevearc/conform.nvim",
     lazy = false,
     config = function()
-      require "custom.thearyanahmed.formatter"
+      require "custom.thearyanahmed.configs.formatter"
     end,
   },
   {
