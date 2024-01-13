@@ -6,19 +6,12 @@ local plugins = {
       require("auto-save").setup {}
     end,
   },
-  -- [[{"nvim-lua/plenary.nvim"},
-  -- {
-  --  "nvimtools/none-ls.nvim",
-  --  config = function()
-   --   require "custom.thearyanahmed.configs.none-ls"
-   -- end,
-  -- },
-   {
+  {
     "stevearc/conform.nvim",
-   lazy = false,
+    lazy = false,
     config = function()
-    require "custom.thearyanahmed.formatter"
-  end,
+      require "custom.thearyanahmed.formatter"
+    end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -44,11 +37,9 @@ local plugins = {
         "yamlfmt",
         "sqlfmt",
         "beautysh",
-        -- "awk-language-server",
         "bash-language-server",
         "cmake-language-server",
         "css-lsp",
-        -- "autotools-language-server",
         "dockerfile-language-server",
         "docker-compose-language-service",
         "gopls",
@@ -59,7 +50,6 @@ local plugins = {
         "intelephense",
         "pyright",
         "sqlls",
-        -- "taplo",
         "tailwindcss-language-server",
         "terraform-ls",
         "typescript-language-server",

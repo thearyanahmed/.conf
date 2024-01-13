@@ -1,18 +1,14 @@
 require("conform").setup {
   formatters_by_ft = {
     lua = { "stylua" },
-    -- Conform will run multiple formatters sequentially
-    --    python = { "isort", "black" },
-    -- Use a sub-list to run only the first available formatter
-    javascript = { { "ast-grep" }, { "prettierd" }, { "prettier" } },
-
+    javascript = { "prettier" },
     typescript = { "prettier" },
-    tsx = { "prettier" },
+    ts = { "prettier" },
     css = { "prettier" },
     html = { "prettier" },
 
     sh = { "beautysh" },
-    php = { "pretty-php" },
+    php = { "php" },
   },
 
   lsp_fallback = true,
@@ -22,10 +18,3 @@ require("conform").setup {
     lsp_fallback = true,
   },
 }
-
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = function(args)
-    require("conform").format { bufnr = args.buf }
-  end,
-})
