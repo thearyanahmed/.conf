@@ -16,7 +16,8 @@ plugins=(
 ZSH_THEMES="/Users/thearyanahmed/.zsh-themes"
 export ZSH="/Users/thearyanahmed/.oh-my-zsh"
 
-ZSH_THEME="jovial"
+# ZSH_THEME="jovial"
+ZpSH_THEME="spaceship"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -86,6 +87,11 @@ alias systemshutdown="valet stop; stmysql;"
 alias shr="source ~/.zshrc"
 
 alias vi="nvim"
+
+# Utils 
+
+alias :o="vi ."
+
 export GOPATH=$HOME/awesomego
 
 # sourcing
@@ -95,6 +101,8 @@ export GOPATH=$HOME/awesomego
 
 export HOMEBREW_NO_AUTO_UPDATE=true
 
+export DENO_INSTALL="/Users/thearyanahmed/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Include private values
 source ~/.private.rc
