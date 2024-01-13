@@ -27,13 +27,11 @@ if [ "$1" = "zshrc" ]; then
     commit_and_push "$1"
 fi
 
-if [ "$1" = "nvim"];
-  if [ -e "nvim"]; then
-    rm -rf nvim
-  fi
+if [ "$1" = "nvim"]; then
+    if [ -e "nvim"]; then
+        rm -rf nvim
+    fi
 
-  cp -r ~/.config/nvim/lua/custom/thearyanahmed/ nvim
+    cp -r ~/.config/nvim/lua/custom/thearyanahmed/ nvim
+    commit_and_push "$1"
 fi
-
-
-
