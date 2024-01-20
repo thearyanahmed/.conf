@@ -90,8 +90,15 @@ alias vi="nvim"
 
 # Utils 
 
-alias :o="vi ."
+alias :o="nvim ."
 
+#kubernetes
+
+alias ka="kubectl apply -f $1"
+alias kd='kubectl describe "$@"'
+alias kp='kubectl get pods "$@"'
+alias kapi='kubectl api-resources'
+alias kbd='kubebuilder "$@"'
 export GOPATH=$HOME/awesomego
 
 # sourcing
@@ -103,6 +110,8 @@ export HOMEBREW_NO_AUTO_UPDATE=true
 
 export DENO_INSTALL="/Users/thearyanahmed/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+
 
 # Include private values
 source ~/.private.rc
