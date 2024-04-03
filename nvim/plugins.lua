@@ -7,6 +7,22 @@ local plugins = {
     end,
   },
   {
+    "rcarriga/nvim-notify",
+    config = function()
+      local notify = require "notify"
+      -- this for transparency
+      notify.setup { background_colour = "#000000" }
+      -- this overwrites the vim notify function
+      vim.notify = notify.notify
+    end,
+  },
+  {
+    "jessarcher/onedark.nvim",
+    config = function()
+      vim.cmd ""
+    end,
+  },
+  {
     "stevearc/conform.nvim",
     lazy = false,
     config = function()
@@ -40,6 +56,22 @@ local plugins = {
         "bash-language-server",
         "cmake-language-server",
         "css-lsp",
+        "prettier",
+        "prettierd",
+        "jq", -- json
+        "stylua", -- lua,
+        "asmfmt",
+        "ast-grep",
+        "blade-formatter",
+        "php-cs-fixer",
+        "rust-analyzer",
+        "goimports",
+        "yamlfmt",
+        "sqlfmt",
+        "beautysh",
+        "bash-language-server",
+        "cmake-language-server",
+        "css-lsp",
         "dockerfile-language-server",
         "docker-compose-language-service",
         "gopls",
@@ -47,7 +79,8 @@ local plugins = {
         "helm-ls",
         "json-lsp",
         "marksman",
-        "intelephense",
+        --        "intelephense",
+        --        "phpactor",
         "pyright",
         "sqlls",
         "tailwindcss-language-server",
